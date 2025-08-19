@@ -9,8 +9,8 @@ begin
 rescue LoadError
   require 'pathname' # JJM WORK_AROUND #14073
   module_base = Pathname.new(__FILE__).dirname
-  require "#{module_base}../../../puppet_x/twp/inifile.rb"
-  require "#{module_base}../../../puppet_x/lsp/security_policy.rb"
+  require "#{module_base}/../../../puppet_x/twp/inifile.rb"
+  require "#{module_base}/../../../puppet_x/lsp/security_policy.rb"
 end
 
 Puppet::Type.type(:local_security_policy).provide(:policy) do
